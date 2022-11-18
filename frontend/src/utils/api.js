@@ -139,6 +139,6 @@ class Api {
   }
   }
   // Замените на адрес вашего бэкенда
-  const api = new Api('http://62.84.112.156:3000');
+  const api = new Api('https://api.kalmykova.nomoredomains.icu');
 
   export default api;
