@@ -17,8 +17,8 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'https://github.com/valery-kalmykova/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
-      // 'pre-setup': `cd && cd /home/valery-kalmykova && rm -rf mesto-frontend`,
-      'post-deploy': `cd && cd ${DEPLOY_PATH}/source/frontend && npm i && npm run build`,
+      'pre-setup': `cd && cd /home/valery-kalmykova && rm -rf mesto-frontend`,
+      'post-setup': `cd && cd ${DEPLOY_PATH}/source/frontend && npm i && npm run build`,
     },
   },
 };
