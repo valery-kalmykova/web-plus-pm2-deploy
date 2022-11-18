@@ -1,3 +1,5 @@
 # Деплой приложения на сервер с использованием pm2
 
-Стартеркит проекта по автоматизации деплоя фронтенда и бэкенда при помощи pm2 (pm2 deploy)
+### IP адрес 62.84.112.156
+### Frontend https://kalmykova.nomoredomains.icu
+### Backend https://api.kalmykova.nomoredomains.icu
