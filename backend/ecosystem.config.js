@@ -18,7 +18,7 @@ module.exports = {
       repo: 'https://github.com/valery-kalmykova/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
       // 'pre-setup': `scp ./.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': `cd && cd ${DEPLOY_PATH}/source/backend && npm i && npm run build && pm2 restart app`,
+      'post-deploy': `cd && cd ${DEPLOY_PATH}/source/backend && npm i && npm run build`,
     },
   },
 };
