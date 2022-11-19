@@ -16,6 +16,8 @@ router.get('/crash-test', () => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
+// http://joxi.ru/bmo736wIOzPgqm
+
 router.post('/signup', validateUserBody, createUser);
 router.post('/signin', validateAuthentication, login);
 
