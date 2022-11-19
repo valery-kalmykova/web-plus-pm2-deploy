@@ -5,16 +5,15 @@ import userRouter from './users';
 import cardRouter from './cards';
 import auth from '../middlewares/auth';
 import NotFoundError from '../errors/not-found-error';
-import ServerError from '../errors/server-error';
 import {
   createUser, login,
 } from '../controllers/users';
 import { validateUserBody, validateAuthentication } from '../middlewares/validatons';
 
 const router = Router();
-router.get('/crash-test', (next: NextFunction) => {
+router.get('/crash-test', () => {
   setTimeout(() => {
-    next(new ServerError('Сервер сейчас упадёт'));
+    throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
 router.post('/signup', validateUserBody, createUser);
