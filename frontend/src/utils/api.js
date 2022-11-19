@@ -12,10 +12,6 @@ class Api {
       this._token = token;
     }
 
-    crash() {
-      return fetch(`${this._address}/crash-test`).then(getResponse)
-    }
-
     getAppInfo() {
       return Promise.all([this.getCardList(), this.getUserInfo()]);
     }

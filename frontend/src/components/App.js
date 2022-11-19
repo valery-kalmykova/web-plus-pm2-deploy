@@ -24,7 +24,7 @@ function App() {
   const [selectedCard, setSelectedCard] = React.useState(null);
   const [cards, setCards] = React.useState([]);
 
-  
+
   const [currentUser, setCurrentUser] = React.useState({});
 
   const [isInfoToolTipOpen, setIsInfoToolTipOpen] = React.useState(false);
@@ -61,7 +61,7 @@ function App() {
   }, [history]);
 
 
-  
+
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
   }
@@ -166,15 +166,15 @@ function App() {
   }
 
   function onSignOut() {
-    
+
     localStorage.removeItem("jwt");
     setIsLoggedIn(false);
-    
+
     history.push("/signin");
   }
 
   return (
-    
+
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page__content">
         <Header email={email} onSignOut={onSignOut} />
@@ -194,6 +194,7 @@ function App() {
             loggedIn={isLoggedIn}
           />
           {/*Роут /signup и /signin не является защищёнными, т.е оборачивать их в HOC ProtectedRoute не нужно.*/}
+          
           <Route path="/signup">
             <Register onRegister={onRegister} />
           </Route>
